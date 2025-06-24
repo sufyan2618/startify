@@ -1,7 +1,7 @@
 import QueryResetForm from "@/components/QueryResetForm";
 import { Search, X } from "lucide-react";
 import Card from "@/components/Card";
-import { auth } from "@/auth";
+
 
 export default async function Home({ searchParams }) {
   // Extracting the query from searchParams if needed
@@ -11,10 +11,11 @@ export default async function Home({ searchParams }) {
     id: 1,
     title: "Interpreneur Platform",
     author: { id: 1, name: "John Doe" },
-    date: "2023-10-01",
+    date: new Date().toLocaleDateString(),
+    views: 100,
     category: "Technology",
     description: "A platform to connect interpreneurs and translators.",
-    image: "https://example.com/image.jpg",
+    image: "https://placehold.co/400x300.png?text=Interpreneur+Image",
    }
 
   return (
@@ -54,7 +55,7 @@ export default async function Home({ searchParams }) {
       </div>
       <div className="flex items-center justify-center mt-10">
         {/* Assuming Card is a component that displays the results */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 p-6 md:grid-cols-2 lg:grid-cols-3 gap-6">
            <Card post = {post} /> 
       </div>
       </div>
