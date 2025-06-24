@@ -2,4 +2,7 @@
 export const structure = (S) =>
   S.list()
     .title('Content')
-    .items(S.documentTypeListItems())
+    .items([
+      S.documentTypeListItem('post').title('Posts'),
+      S.documentTypeListItem('author').title('Authors'),
+    ])

@@ -1,5 +1,6 @@
 // This is the minimal root layout for your entire application.
 import './globals.css'; // You can keep global styles here.
+import 'easymde/dist/easymde.min.css'; 
 
 export const metadata = {
   title: 'My App',
